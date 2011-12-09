@@ -1,0 +1,11 @@
+#features-menu li a.icon-cslibrary span.icon {
+  background:url(images/icon40.png) no-repeat;
+}
+
+.feature .feature-atrium_cslibrary {
+  background:transparent url(images/icon20.png) no-repeat;
+}
+
+.feature-atrium_cslibrary {
+  background:url(images/icon20.png) no-repeat !important;
+}

@@ -1,0 +1,39 @@
+<?php
+
+include_once('atrium_cslibrary.features.inc');
+
+/**
+ * Implementation of hook_help().
+ */
+function atrium_cslibrary_help($path) {
+  // Central help page content.
+  if ($path == 'help#atrium_cslibrary') {
+    $help = '<h3>'. t('Library') .'</h3>';
+    $help .= '<p>'. t("The Library page is the intructors blog. Course information posts let instructors share course related content, information, and challenges.") .'</p>';
+    $help .= '<p>'. t("To create a library post navigate to the Library page and click the \"Add Library\" button. You will need to enter a title and some body content to your post. Then click \"Save\".") .'</p>';
+    return $help;
+  }
+
+  // Contextual help content.
+  if (context_isset('context', 'cslibrary_listing')) {
+    if ($path == 'node/add/cslibrary') {
+      $help = '';
+      $help .= '<h3>'. t('Library') .'</h3>';
+      $help .= '<p>'. t("Post library for this group. The post will be shared will all group members on the Library page, and they will be able to reply to it. You can optionally notify other group members by checking their name in the notifications field.") .'</p>';
+      return $help;
+    }
+    else {
+      $help = '<h3>'. t('Library') .'</h3>';
+      $help .= '<p>'. t("Library lets you share course related content, information, and challenges.") .'</p>';
+      return $help;
+    }
+  }
+}
+
+
+/**
+* Implementation of hook_init().
+*/
+function atrium_cslibrary_init() {
+  drupal_add_css(drupal_get_path('module', 'atrium_cslibrary') .'/atrium_cslibrary.css');
+}
