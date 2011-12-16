@@ -11,7 +11,7 @@ function atrium_cslibrary_content_default_fields() {
     'field_name' => 'field_cscrlink',
     'type_name' => 'cslibrary',
     'display_settings' => array(
-      'weight' => '10',
+      'weight' => '12',
       'parent' => 'group_csbcr',
       'label' => array(
         'format' => 'hidden',
@@ -80,10 +80,72 @@ function atrium_cslibrary_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'CSCR Link',
-      'weight' => '10',
+      'weight' => '12',
       'description' => '',
       'type' => 'iframe',
       'module' => 'iframe',
+    ),
+  );
+
+  // Exported field: field_cscrupload
+  $fields['cslibrary-field_cscrupload'] = array(
+    'field_name' => 'field_cscrupload',
+    'type_name' => 'cslibrary',
+    'display_settings' => array(
+      'weight' => '11',
+      'parent' => 'group_csbcr',
+      'label' => array(
+        'format' => 'hidden',
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 1,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '5' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'filefield',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'filefield',
+    'active' => '1',
+    'list_field' => '0',
+    'list_default' => 1,
+    'description_field' => '0',
+    'widget' => array(
+      'file_extensions' => 'zip',
+      'file_path' => 'csbcr/[user]',
+      'progress_indicator' => 'bar',
+      'max_filesize_per_file' => '',
+      'max_filesize_per_node' => '',
+      'label' => 'CSCR Upload',
+      'weight' => '11',
+      'description' => '',
+      'type' => 'filefield_widget',
+      'module' => 'filefield',
     ),
   );
 
@@ -238,7 +300,7 @@ function atrium_cslibrary_content_default_fields() {
     'field_name' => 'field_referenced_book_page',
     'type_name' => 'cslibrary',
     'display_settings' => array(
-      'weight' => '4',
+      'weight' => '5',
       'parent' => '',
       'label' => array(
         'format' => 'inline',
@@ -275,7 +337,7 @@ function atrium_cslibrary_content_default_fields() {
     'advanced_view_args' => '',
     'widget' => array(
       'autocomplete_match' => 'contains',
-      'size' => NULL,
+      'size' => '60',
       'default_value' => array(
         '0' => array(
           'nid' => NULL,
@@ -355,6 +417,7 @@ function atrium_cslibrary_content_default_fields() {
   // Translatables
   // Included for use with string extractors like potx.
   t('CSCR Link');
+  t('CSCR Upload');
   t('Images');
   t('Link');
   t('Referenced Page');

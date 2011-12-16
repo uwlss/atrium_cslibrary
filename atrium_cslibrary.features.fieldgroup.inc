@@ -19,17 +19,19 @@ function atrium_cslibrary_fieldgroup_default_groups() {
 <a href="http://engage.wisc.edu/software/csb/index.html" target="_blank">More information on Case Scenario / Critical Reader Builder</a>',
       ),
       'display' => array(
-        'description' => '',
-        '5' => array(
-          'format' => 'fieldset',
-          'exclude' => 0,
-        ),
+        'weight' => '1',
+        'label' => 'hidden',
         'teaser' => array(
           'format' => 'no_style',
           'exclude' => 0,
         ),
         'full' => array(
           'format' => 'no_style',
+          'exclude' => 0,
+        ),
+        'description' => '',
+        '5' => array(
+          'format' => 'fieldset',
           'exclude' => 0,
         ),
         '4' => array(
@@ -48,12 +50,12 @@ function atrium_cslibrary_fieldgroup_default_groups() {
           'format' => 'fieldset',
           'exclude' => 0,
         ),
-        'label' => 'hidden',
       ),
     ),
     'weight' => '1',
     'fields' => array(
-      '0' => 'field_cscrlink',
+      '0' => 'field_cscrupload',
+      '1' => 'field_cscrlink',
     ),
   );
 
@@ -69,7 +71,7 @@ function atrium_cslibrary_fieldgroup_default_groups() {
         'description' => '',
       ),
       'display' => array(
-        'weight' => '-3',
+        'weight' => '-2',
         'label' => 'hidden',
         'teaser' => array(
           'format' => 'no_style',
@@ -171,7 +173,7 @@ function atrium_cslibrary_fieldgroup_default_groups() {
         'description' => '',
       ),
       'display' => array(
-        'weight' => '-2',
+        'weight' => '-1',
         'label' => 'hidden',
         'teaser' => array(
           'format' => 'fieldset',
